@@ -1,5 +1,5 @@
 package group6.cateringapp;
-
+import g6.enums.*;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
