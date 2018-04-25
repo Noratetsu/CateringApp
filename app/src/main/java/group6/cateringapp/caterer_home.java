@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class caterer_home extends AppCompatActivity {
     Button b_logout, b_view_cat_event_request, b_view_user_request, b_update_profile;
 
     @Override
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openSelectedEventScreen(){
-            Intent intent = new Intent(this,User_interface.class);
+            Intent intent = new Intent(this,selected_event_screen.class);
             startActivity(intent);
 
 

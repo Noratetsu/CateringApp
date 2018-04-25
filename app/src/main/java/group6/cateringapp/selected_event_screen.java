@@ -3,7 +3,7 @@ package group6.cateringapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class User_interface extends AppCompatActivity {
+public class selected_event_screen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
