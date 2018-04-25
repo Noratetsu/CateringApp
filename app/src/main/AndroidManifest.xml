@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".User_interface" />
+        <activity android:name=".user_request_summary"></activity>
     </application>
 
 </manifest>
