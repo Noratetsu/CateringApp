@@ -32,6 +32,14 @@ public class caterer_home extends AppCompatActivity {
                 openUserRequestScreen();
             }
         });
+        b_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                openLoginScreen();
+
+            }
+        });
     }
 
     private void openSelectedEventScreen(){
@@ -45,6 +53,10 @@ public class caterer_home extends AppCompatActivity {
         startActivity(intent);
     };
 
+    private void openLoginScreen(){
+        Intent intent = new Intent(this, login_screen.class);
+        startActivity(intent);
+    };
 
 
 }
