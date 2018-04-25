@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="group6.cateringapp.MainActivity">
+    tools:context="group6.cateringapp.caterer_home">
 
     <GridLayout
         android:id="@+id/gridLayout2"
