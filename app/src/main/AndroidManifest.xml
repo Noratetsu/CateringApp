@@ -22,7 +22,8 @@
         <activity android:name=".registration_screen" />
         <activity android:name=".login_screen" />
         <activity android:name=".registration_form" />
-        <activity android:name=".select_caterer_event"></activity>
+        <activity android:name=".select_caterer_event" />
+        <activity android:name=".select_Event"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="group6.cateringapp.select_Event">
+
+    <Button
+        android:id="@+id/b_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_event1"
+        android:layout_width="86dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="24dp"
+        android:text="Select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_logout" />
+
+    <Button
+        android:id="@+id/b_event2"
+        android:layout_width="88dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="24dp"
+        android:text="Select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_event1" />
+
+    <Button
+        android:id="@+id/b_event3"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="24dp"
+        android:text="Select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_event2" />
+
+    <Button
+        android:id="@+id/b_event4"
+        android:layout_width="88dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="24dp"
+        android:text="Select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_event3" />
+
+    <Button
+        android:id="@+id/b_event5"
+        android:layout_width="86dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="24dp"
+        android:text="Select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_event4" />
+
+    <TextView
+        android:id="@+id/event1"
+        android:layout_width="204dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
+        android:text="Event1"
+        app:layout_constraintEnd_toStartOf="@+id/b_event1"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/event2"
+        android:layout_width="206dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Event2"
+        app:layout_constraintEnd_toStartOf="@+id/b_event2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event1" />
+
+    <TextView
+        android:id="@+id/event3"
+        android:layout_width="205dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Event3"
+        app:layout_constraintEnd_toStartOf="@+id/b_event3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event2" />
+
+    <TextView
+        android:id="@+id/event4"
+        android:layout_width="201dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Event4"
+        app:layout_constraintEnd_toStartOf="@+id/b_event4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event3" />
+
+    <TextView
+        android:id="@+id/event5"
+        android:layout_width="203dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Event5"
+        app:layout_constraintEnd_toStartOf="@+id/b_event5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event4" />
+</android.support.constraint.ConstraintLayout>
