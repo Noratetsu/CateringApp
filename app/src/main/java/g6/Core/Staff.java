@@ -5,4 +5,14 @@ package g6.Core;
  */
 
 public class Staff extends System_User {
+    int sID;
+
+    public Staff() {
+        sid = 0;
+    }
+
+    public Staff(String uname, String pw, String lName, String fName, Role r, String pn, String e, String address, String city, String state, String zip) {
+        super(uname, pw, lName, fName, r, pn, e, address, city, state, zip);
+        sID = 0;
+    }
 }
