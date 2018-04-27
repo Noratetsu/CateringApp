@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class dbmgr extends SQLiteOpenHelper{
-
+    private static dbmgr instance = null;
     private static final int database_version = 1;
     private static final String database_name = "CateringApp.db";
     private static final String table_name = "registration";
@@ -28,9 +28,15 @@ public class dbmgr extends SQLiteOpenHelper{
    // SQLiteDatabase db;
    //String table_create = "CREATE TABLE registration (ID integer primary key not null, FirstName text, LastName text, UserName text, Password text, UserType text, Email text, phone text, Address text, City text);";
 
-    public dbmgr (Context context){
+    private dbmgr (Context context){
         super(context, database_name,null,database_version);
 
+    }
+
+    public static dbmgr getInstance(Context context){
+
+        instance = new dbmgr(context);
+        return instance;
     }
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {

@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class registration_form extends AppCompatActivity {
-    dbmgr helper = new dbmgr(this);
+    dbmgr helper = dbmgr.getInstance(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

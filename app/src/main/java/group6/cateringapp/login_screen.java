@@ -11,13 +11,12 @@ import android.widget.Toast;
 public class login_screen extends AppCompatActivity {
     Button b_login, b_signup;
     EditText u_name, password;
-    //dbmgr helper = new dbmgr(this);
-    //dbmgr helper = new dbmgr(this);
+  //  dbmgr helper = dbmgr.getInstance(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
-        dbmgr db = new dbmgr(this);
+        dbmgr db = dbmgr.getInstance(this);
         b_login = (Button) findViewById(R.id.b_login);
         b_signup = (Button) findViewById(R.id.b_signup);
         u_name = (EditText) findViewById(R.id.u_name);
@@ -30,7 +29,7 @@ public class login_screen extends AppCompatActivity {
                 String name = u_name.getText().toString();
                 String pass = password.getText().toString();
                 //openCatererScreen();
-               dbmgr handler = new dbmgr(login_screen.this);
+                dbmgr handler = dbmgr.getInstance(login_screen.this);
                 String password = handler.searchPass(name);
                 String usertype = handler.searchUserType(name);
                 if(pass.equals(password)){
