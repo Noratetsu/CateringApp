@@ -23,6 +23,7 @@
         <activity android:name=".login_screen" />
         <activity android:name=".registration_form" />
         <activity android:name=".staff_homepage" />
+        <activity android:name=".request_event_page" />
         <activity
             android:name=".ViewAvailableStaff"
             android:label="@string/title_activity_view_available_staff"

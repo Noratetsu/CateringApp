@@ -13,4 +13,39 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="444dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="59dp">
+
+        <Button
+            android:id="@+id/b_uevent_sum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View User Event Summary" />
+
+        <Button
+            android:id="@+id/b_request_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Request Event" />
+
+        <Button
+            android:id="@+id/b_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Profile" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/b_logout"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="3dp" />
 </android.support.constraint.ConstraintLayout>
