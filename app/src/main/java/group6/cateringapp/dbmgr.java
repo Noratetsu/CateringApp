@@ -81,6 +81,26 @@ public class dbmgr extends SQLiteOpenHelper{
         return password_on_record;
     }
 
+    public String searchUserType(String uname){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT " + column_uname + " , " + column_usertype+ " FROM " + table_name + ";";
+        Cursor cursor = db.rawQuery(query,null);
+        String uname_on_record;
+        String usertype_on_record = "not valid user";
+        if(cursor.moveToFirst()){
+            do{
+                uname_on_record = cursor.getString(0);
+                if (uname_on_record.equals(uname)){
+                    usertype_on_record = cursor.getString(1);
+                    break;
+                }
+            }
+            while(cursor.moveToNext());
+        }
+        return usertype_on_record;
+
+    }
+
     /*public SignUpDetails retrieveUser(String username, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
 

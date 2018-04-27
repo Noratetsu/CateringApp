@@ -32,34 +32,25 @@ public class login_screen extends AppCompatActivity {
                 //openCatererScreen();
                dbmgr handler = new dbmgr(login_screen.this);
                 String password = handler.searchPass(name);
-
+                String usertype = handler.searchUserType(name);
                 if(pass.equals(password)){
-
+                    if (usertype.equals("caterer") || usertype.equals("Caterer")){
                    openCatererScreen();
-                   finish();
+                   finish();}
+                    else if (usertype.equals("user") || usertype.equals("User")){
+                        openUserScreen();
+                    }
+                    else if (usertype.equals("staff") || usertype.equals("Staff")){
+                        openStaffScreen();
+                    }
+                   else{
+                        Toast.makeText(login_screen.this, "Invalid Usertype!!",Toast.LENGTH_SHORT).show();
+                    }
                 }
                else{
                     Toast.makeText(login_screen.this, "Wrong Password!!",Toast.LENGTH_SHORT).show();
                 }
-               /* SignUpDetails user = handler.retrieveUser(name,pass);
 
-                if (user != null) {
-                    openCatererScreen();
-                    finish();
-                } else {
-                    Toast.makeText(login_screen.this, "WRONG EMAIL ID OR PASSWORD", Toast.LENGTH_LONG).show();
-                }
-                /* String password = helper.searchPass(name);//searching password associated with uname in the database
-                if(pass.equals(password)){
-
-                    openCatererScreen();
-
-                }
-                else{
-                    Toast.makeText(getApplicationContext(), "Wrong Password!!",Toast.LENGTH_SHORT).show();
-                }
-
-                */
             }
 
 
@@ -76,8 +67,18 @@ public class login_screen extends AppCompatActivity {
             startActivity(intent);
 
     }
+    private void openUserScreen(){
+        Intent intent = new Intent(this,user_homepage.class);
+        startActivity(intent);
 
-        private void openRegistrationScreen(){
+    }
+    private void openStaffScreen(){
+        Intent intent = new Intent(this,staff_homepage.class);
+        startActivity(intent);
+
+    }
+
+    private void openRegistrationScreen(){
           Intent intent = new Intent(this, registration_form.class);
           startActivity(intent);
         }
