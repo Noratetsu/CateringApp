@@ -16,11 +16,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".User_interface" />
+        <activity android:name=".selected_event_screen" />
         <activity android:name=".user_request_summary" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".caterer_home" />
         <activity android:name=".registration_screen" />
-        <activity android:name=".login_screen"></activity>
+        <activity android:name=".login_screen" />
+        <activity android:name=".registration_form" />
+        <activity
+            android:name=".ViewAvailableStaff"
+            android:label="@string/title_activity_view_available_staff"
+            android:parentActivityName=".selected_event_screen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="group6.cateringapp.selected_event_screen" />
+        </activity>
     </application>
 
 </manifest>
