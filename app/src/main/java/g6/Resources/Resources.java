@@ -1,4 +1,4 @@
-package g6.enums;
+package g6.Resources;
 
 /**
  * Created by Noratetsu on 4/25/2018.

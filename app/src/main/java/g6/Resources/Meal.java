@@ -1,7 +1,7 @@
-package g6.enums;
+package g6.Resources;
 
 /**
- * Created by Noreatetsu on 4/25/2018.
+ * Created by Brandon Keen on 4/25/2018.
  */
 
 public enum Meal {

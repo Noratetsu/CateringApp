@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">CateringApp</string>
+    <string name="app_name">MAVS Catering</string>
+    <string name="edit_message">enter a value</string>
+    <string name="button_send">send</string>
 </resources>
