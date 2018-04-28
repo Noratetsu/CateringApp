@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import g6.Database.dbmgr;
+
 public class login_screen extends AppCompatActivity {
     Button b_login, b_signup;
     EditText u_name, password;
