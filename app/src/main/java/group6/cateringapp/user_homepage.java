@@ -48,7 +48,7 @@ public class user_homepage extends AppCompatActivity {
     }
 
     private void openRequestPage(){
-        Intent intent = new Intent(this, request_event_page.class);
+        Intent intent = new Intent(this, request_event.class);
         startActivity(intent);
     }
 

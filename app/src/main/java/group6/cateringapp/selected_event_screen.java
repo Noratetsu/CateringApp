@@ -1,5 +1,6 @@
 package group6.cateringapp;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.widget.EditText;
 
 public class selected_event_screen extends AppCompatActivity {
 
-    Button b_view_available_staff, b_logout,b_add_resources;
+    Button b_view_available_staff, b_logout,b_add_resources, b_cancel_event;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class selected_event_screen extends AppCompatActivity {
         b_view_available_staff = (Button)findViewById(R.id.b_view_available_staff);
         b_logout = (Button)findViewById(R.id.b_logout);
         b_add_resources = (Button)findViewById(R.id.b_add_resources);
+        b_cancel_event = (Button)findViewById(R.id.b_cancel_event);
        b_view_available_staff.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
@@ -38,6 +40,12 @@ public class selected_event_screen extends AppCompatActivity {
                openAddResourcePage();
            }
        });
+       b_cancel_event.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+
+           };
+       });
 
     }
 
@@ -53,4 +61,5 @@ public class selected_event_screen extends AppCompatActivity {
         Intent intent = new Intent(this, add_resources.class);
         startActivity(intent);
     };
+
 }
