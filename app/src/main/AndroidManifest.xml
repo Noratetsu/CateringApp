@@ -33,6 +33,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="group6.cateringapp.selected_event_screen" />
         </activity>
+        <activity android:name=".add_resources"></activity>
     </application>
 
 </manifest>
