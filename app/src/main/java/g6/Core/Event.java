@@ -17,11 +17,13 @@ public class Event {
     int estimatedAttendies;
     String eventName;
     EventStatus status;
+    String occasion;
 
     public Event() {
     }
 
-    public Event(User user, Date date, int duration,Time startTime, Resources resources, int estimatedAttendies, String eventName, EventStatus status) {
+    public Event(String occasion, User user, Date date, int duration,Time startTime, Resources resources, int estimatedAttendies, String eventName, EventStatus status) {
+        this.occasion = occasion;
         this.date = date;
         this.duration = duration;
         this.startTime = startTime;
@@ -119,8 +121,6 @@ public class Event {
         return staffSummary;
     }
 
-
-
     public User getUser() {
         return user;
     }
@@ -132,5 +132,13 @@ public class Event {
     public double generateEstimatedCost()
     {
         return resources.calculateCost(duration,estimatedAttendies);
+    }
+
+    public String getOccasion() {
+        return occasion;
+    }
+
+    public void setOccasion(String occasion) {
+        this.occasion = occasion;
     }
 }

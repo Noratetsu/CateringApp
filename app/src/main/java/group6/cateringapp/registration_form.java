@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import g6.Database.dbmgr;
+
 public class registration_form extends AppCompatActivity {
     dbmgr helper = dbmgr.getInstance(this);
     @Override
