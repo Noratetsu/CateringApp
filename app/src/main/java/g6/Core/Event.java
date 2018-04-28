@@ -1,5 +1,6 @@
 package g6.Core;
 import java.sql.Date;
+import java.sql.Time;
 
 import g6.Resources.*;
 /**
@@ -7,23 +8,31 @@ import g6.Resources.*;
  */
 
 public class Event {
+
+    User user;
     Date date;
     int duration;
+    Time startTime;
     Resources resources;
     int estimatedAttendies;
     String eventName;
     EventStatus status;
+    String occasion;
 
     public Event() {
     }
 
-    public Event(Date date, int duration, Resources resources, int estimatedAttendies, String eventName, EventStatus status) {
+    public Event(String occasion, User user, Date date, int duration,Time startTime, Resources resources, int estimatedAttendies, String eventName, EventStatus status) {
+        this.occasion = occasion;
         this.date = date;
         this.duration = duration;
+        this.startTime = startTime;
         this.resources = resources;
         this.estimatedAttendies = estimatedAttendies;
         this.eventName = eventName;
         this.status = status;
+        this.user = user;
+
     }
 
     public Date getDate() {
@@ -74,6 +83,62 @@ public class Event {
         this.status = status;
     }
 
+    public Time getStartTime() {
+        return startTime;
+    }
 
+    public void setStartTime(Time startTime) {
+        this.startTime = startTime;
+    }
 
+    public EventSummary getSummary()
+    {
+        if(date != null && startTime != null && duration != 0 && resources.getHall() != null)
+            return new EventSummary(eventName,date,startTime,duration,resources.getHall());
+        else
+            return null;
+    }
+
+    public UserEventSummary getUserEventSummary()
+    {
+        UserEventSummary userSummery = (UserEventSummary)getSummary();
+        userSummery.setEstimatedCost(generateEstimatedCost());
+        return userSummery;
+    }
+
+    public CatererEventSummary getCatererEventSummary()
+    {
+        CatererEventSummary catererSummary = (CatererEventSummary)getSummary();
+        catererSummary.setEstAttendence(estimatedAttendies);
+        catererSummary.setUser(user);
+        return catererSummary;
+    }
+
+    public StaffEventSummary getStaffEventSummary()
+    {
+        StaffEventSummary staffSummary = (StaffEventSummary)getSummary();
+        staffSummary.setUser(user);
+        return staffSummary;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public double generateEstimatedCost()
+    {
+        return resources.calculateCost(duration,estimatedAttendies);
+    }
+
+    public String getOccasion() {
+        return occasion;
+    }
+
+    public void setOccasion(String occasion) {
+        this.occasion = occasion;
+    }
 }

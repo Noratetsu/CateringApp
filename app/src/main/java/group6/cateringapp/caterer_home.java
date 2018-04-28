@@ -22,7 +22,7 @@ public class caterer_home extends AppCompatActivity {
             public void onClick(View view) {
                 openSelectedEventScreen();
 
-            }
+            };
         });
         b_view_user_request.setOnClickListener(new View.OnClickListener() {
             @Override
