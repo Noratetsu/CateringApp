@@ -1,5 +1,4 @@
 package group6.cateringapp;
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,7 +12,6 @@ public class caterer_home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.caterer_home);
-
 
         b_view_cat_event_request = (Button) findViewById(R.id.b_view_cat_event_summary);
         b_view_user_request = (Button) findViewById(R.id.b_view_user_request);

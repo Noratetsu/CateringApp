@@ -45,8 +45,8 @@ public class system_home extends AppCompatActivity {
     };
 
     private void openRegistrationScreen(){
-        Intent intent = new Intent(this,registration_screen.class);
+        Intent intent = new Intent(this, registration_form.class);
         startActivity(intent);
-
     };
 }
+

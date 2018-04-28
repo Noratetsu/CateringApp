@@ -19,9 +19,11 @@
         <activity android:name=".selected_event_screen" />
         <activity android:name=".user_request_summary" />
         <activity android:name=".caterer_home" />
-        <activity android:name=".registration_screen" />
+        <activity android:name=".user_homepage" />
         <activity android:name=".login_screen" />
         <activity android:name=".registration_form" />
+        <activity android:name=".staff_homepage" />
+        <activity android:name=".request_event_page" />
         <activity
             android:name=".ViewAvailableStaff"
             android:label="@string/title_activity_view_available_staff"
