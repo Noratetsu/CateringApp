@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class login_screen extends AppCompatActivity {
     Button b_login, b_signup;
     EditText u_name, password;
-  //  dbmgr helper = dbmgr.getInstance(this);
+    dbmgr helper = dbmgr.getInstance(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

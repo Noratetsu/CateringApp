@@ -1,6 +1,5 @@
 package g6.Core;
-import java.util.Date;
-import java.time.*;
+import java.sql.Date;
 
 import g6.Resources.*;
 /**
@@ -9,7 +8,6 @@ import g6.Resources.*;
 
 public class Event {
     Date date;
-    LocalTime time;
     int duration;
     Resources resources;
     int estimatedAttendies;
@@ -19,9 +17,8 @@ public class Event {
     public Event() {
     }
 
-    public Event(Date date, LocalTime time, int duration, Resources resources, int estimatedAttendies, String eventName, EventStatus status) {
+    public Event(Date date, int duration, Resources resources, int estimatedAttendies, String eventName, EventStatus status) {
         this.date = date;
-        this.time = time;
         this.duration = duration;
         this.resources = resources;
         this.estimatedAttendies = estimatedAttendies;
@@ -35,14 +32,6 @@ public class Event {
 
     public void setDate(Date date) {
         this.date = date;
-    }
-
-    public LocalTime getTime() {
-        return time;
-    }
-
-    public void setTime(LocalTime time) {
-        this.time = time;
     }
 
     public int getDuration() {
@@ -84,7 +73,6 @@ public class Event {
     public void setStatus(EventStatus status) {
         this.status = status;
     }
-
 
 
 
