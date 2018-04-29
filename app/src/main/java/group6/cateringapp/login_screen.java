@@ -9,11 +9,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import g6.Database.dbmgr;
+import g6.Core.User;
 
 public class login_screen extends AppCompatActivity {
     Button b_login, b_signup;
     EditText u_name, password;
-  //  dbmgr helper = dbmgr.getInstance(this);
+    User user;
+    dbmgr helper = dbmgr.getInstance(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
