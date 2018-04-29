@@ -12,10 +12,10 @@ public final class UserTable {
 
     private UserTable(){}
 
-    public static class UserTableInfo implements BaseColumns
+    public static class TableInfo implements BaseColumns
     {
         public static final String TABLE_NAME = "Users";
-        public static final String COLUMN_ID = "UTAID";
+        public static final String COLUMN_ID = "ID";
         public static final String COLUMN_FIRST_NAME = "FirstName";
         public static final String COLUMN_LAST_NAME = "LastName";
         public static final String COLUMN_USERNAME = "Username";
@@ -27,11 +27,11 @@ public final class UserTable {
 
     }
 
-    public static final String CreateSQLTable = "CREATE TABLE " + UserTableInfo.TABLE_NAME + "("+
-            UserTableInfo.COLUMN_ID + " INTEGER PRIMARY KEY," + UserTableInfo.COLUMN_FIRST_NAME + " TEXT," +
-            UserTableInfo.COLUMN_LAST_NAME + " TEXT," + UserTableInfo.COLUMN_USERNAME + " TEXT," +
-            UserTableInfo.COLUMN_USER_TYPE + " TEXT," + UserTableInfo.COLUMN_EMAIL + " Text," +
-            UserTableInfo.COLUMN_PHONE + " TEXT," + UserTableInfo.COLUMN_ADDRESS + " TEXT," +
-            UserTableInfo.COLUMN_CITY + "TEXT);";
+    public static final String CreateSQLTable = "CREATE TABLE " + TableInfo.TABLE_NAME + "("+
+            TableInfo.COLUMN_ID + " INTEGER PRIMARY KEY," + TableInfo.COLUMN_FIRST_NAME + " TEXT," +
+            TableInfo.COLUMN_LAST_NAME + " TEXT," + TableInfo.COLUMN_USERNAME + " TEXT," +
+            TableInfo.COLUMN_USER_TYPE + " TEXT," + TableInfo.COLUMN_EMAIL + " Text," +
+            TableInfo.COLUMN_PHONE + " TEXT," + TableInfo.COLUMN_ADDRESS + " TEXT," +
+            TableInfo.COLUMN_CITY + "TEXT);";
 
 }

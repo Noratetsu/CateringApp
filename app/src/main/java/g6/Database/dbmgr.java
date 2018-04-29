@@ -26,15 +26,6 @@ public class dbmgr extends SQLiteOpenHelper{
     private static final String column_address = "Address";
     private static final String column_city = "City";
     private static final String column_password = "Password";
-    private static final String USERINFO =  "FirstName TEXT," +
-                                            "LastName TEXT," +
-                                            "UserName TEXT," +
-                                            "Password TEXT," +
-                                            "UserType TEXT," +
-                                            "Email TEXT," +
-                                            "phone TEXT," +
-                                            "Address TEXT," +
-                                            "City TEXT);";
     private static final String EVENTINFO = "UTAID int FOREIGN KEY," +
             "date DATE," +
             "duration int," +
@@ -61,19 +52,9 @@ public class dbmgr extends SQLiteOpenHelper{
     }
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String user_table = "CREATE TABLE User (" +
-                "UTAID int PRIMARY KEY NOT NULL," +  USERINFO;
-
-        String Caterer_Table = "CREATE TABLE Caterers (" +
-                "ID int PRIMART KEY AUTOINCREMENT NOT NULL" + USERINFO;
-
-        String Staff_Table = "CREATE TABLE Staff (" + USERINFO;
-
         String Event_Table = " Create TABLE Event (" + EVENTINFO;
 
         sqLiteDatabase.execSQL(UserTable.CreateSQLTable);
-        sqLiteDatabase.execSQL(Caterer_Table);
-        sqLiteDatabase.execSQL(Staff_Table);
         sqLiteDatabase.execSQL(Event_Table);
 
         /*db.execSQL(table_create);
