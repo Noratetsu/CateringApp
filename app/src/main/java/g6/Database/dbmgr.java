@@ -15,29 +15,8 @@ public class dbmgr extends SQLiteOpenHelper{
     private static dbmgr instance = null;
     private static final int database_version = 1;
     private static final String database_name = "CateringApp.db";
-    private static final String table_name = "User";
-    private static final String column_id = "id";
-    private static final String column_fname = "FirstName";
-    private static final String column_lname = "LastName";
-    private static final String column_uname = "UserName";
-    private static final String column_usertype = "UserType";
-    private static final String column_email = "Email";
-    private static final String column_phone = "Phone";
-    private static final String column_address = "Address";
-    private static final String column_city = "City";
-    private static final String column_password = "Password";
-    private static final String EVENTINFO = "UTAID int FOREIGN KEY," +
-            "date DATE," +
-            "duration int," +
-            "time DATETIME," +
-            "attendence int," +
-            "eventName TEXT," +
-            "status int," +
-            "occasion TEXT);";
 
-
-
-    // SQLiteDatabase db;
+       // SQLiteDatabase db;
    //String table_create = "CREATE TABLE registration (ID integer primary key not null, FirstName text, LastName text, UserName text, Password text, UserType text, Email text, phone text, Address text, City text);";
 
     private dbmgr (Context context){
@@ -52,10 +31,9 @@ public class dbmgr extends SQLiteOpenHelper{
     }
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String Event_Table = " Create TABLE Event (" + EVENTINFO;
 
         sqLiteDatabase.execSQL(UserTable.CreateSQLTable);
-        sqLiteDatabase.execSQL(Event_Table);
+        sqLiteDatabase.execSQL(EventTable.CreateSQLTable);
 
         /*db.execSQL(table_create);
         this.db = db;*/
@@ -68,23 +46,23 @@ public class dbmgr extends SQLiteOpenHelper{
         //Cursor cursor = db.rawQuery(query,null);
       //  int count = cursor.getCount();
       //  values.put(column_id, count);
-        values.put(column_fname,c.getFirst_name());
-        values.put(column_lname,c.getLast_name());
-        values.put(column_uname,c.getUser_name());
-        values.put(column_usertype,c.getUser_type());
-        values.put(column_email,c.getEmail());
-        values.put(column_phone,c.getPhone());
-        values.put(column_address,c.getAddress());
-        values.put(column_city,c.getCity());
-        values.put(column_password,c.getPassword());
+        values.put(UserTable.TableInfo.COLUMN_FIRST_NAME,c.getFirst_name());
+        values.put(UserTable.TableInfo.COLUMN_LAST_NAME,c.getLast_name());
+        values.put(UserTable.TableInfo.COLUMN_USERNAME,c.getUser_name());
+        values.put(UserTable.TableInfo.COLUMN_USER_TYPE,c.getUser_type());
+        values.put(UserTable.TableInfo.COLUMN_EMAIL,c.getEmail());
+        values.put(UserTable.TableInfo.COLUMN_PHONE,c.getPhone());
+        values.put(UserTable.TableInfo.COLUMN_ADDRESS,c.getAddress());
+        values.put(UserTable.TableInfo.COLUMN_CITY,c.getCity());
+        values.put(UserTable.TableInfo.COLUMN_PASSWORD,c.getPassword());
 
-        db.insert(table_name, null, values);
+        db.insert(UserTable.TableInfo.TABLE_NAME, null, values);
         db.close();
     }
 
     public String searchPass(String uname){
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT " + column_uname + " , " + column_password + " FROM " + table_name + ";";
+        String query = "SELECT " + UserTable.TableInfo.COLUMN_USERNAME + " , " + UserTable.TableInfo.COLUMN_PASSWORD + " FROM " + UserTable.TableInfo.TABLE_NAME + ";";
         Cursor cursor = db.rawQuery(query,null);
         String uname_on_record;
         String password_on_record = "not found";
@@ -103,7 +81,7 @@ public class dbmgr extends SQLiteOpenHelper{
 
     public String searchUserType(String uname){
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT " + column_uname + " , " + column_usertype+ " FROM " + table_name + ";";
+        String query = "SELECT " + UserTable.TableInfo.COLUMN_USERNAME + " , " + UserTable.TableInfo.COLUMN_USER_TYPE+ " FROM " + UserTable.TableInfo.TABLE_NAME + ";";
         Cursor cursor = db.rawQuery(query,null);
         String uname_on_record;
         String usertype_on_record = "not valid user";
@@ -149,7 +127,7 @@ public class dbmgr extends SQLiteOpenHelper{
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         //String query = "drop table if exists" + table_name;
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + table_name);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + UserTable.TableInfo.TABLE_NAME);
         onCreate(sqLiteDatabase);
         // db.execSQL(query);
         //this.onCreate(db);

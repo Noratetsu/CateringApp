@@ -19,6 +19,7 @@ public final class UserTable {
         public static final String COLUMN_FIRST_NAME = "FirstName";
         public static final String COLUMN_LAST_NAME = "LastName";
         public static final String COLUMN_USERNAME = "Username";
+        public static final String COLUMN_PASSWORD = "Password";
         public static final String COLUMN_USER_TYPE = "UserType";
         public static final String COLUMN_EMAIL = "Email";
         public static final String COLUMN_PHONE = "Phone";
@@ -29,9 +30,8 @@ public final class UserTable {
 
     public static final String CreateSQLTable = "CREATE TABLE " + TableInfo.TABLE_NAME + "("+
             TableInfo.COLUMN_ID + " INTEGER PRIMARY KEY," + TableInfo.COLUMN_FIRST_NAME + " TEXT," +
-            TableInfo.COLUMN_LAST_NAME + " TEXT," + TableInfo.COLUMN_USERNAME + " TEXT," +
-            TableInfo.COLUMN_USER_TYPE + " TEXT," + TableInfo.COLUMN_EMAIL + " Text," +
-            TableInfo.COLUMN_PHONE + " TEXT," + TableInfo.COLUMN_ADDRESS + " TEXT," +
-            TableInfo.COLUMN_CITY + "TEXT);";
+            TableInfo.COLUMN_LAST_NAME + " TEXT," + TableInfo.COLUMN_USERNAME + " TEXT," + TableInfo.COLUMN_PASSWORD + " TEXT," +
+            TableInfo.COLUMN_USER_TYPE + " TEXT," + TableInfo.COLUMN_EMAIL + " Text," + TableInfo.COLUMN_PHONE + " TEXT," +
+            TableInfo.COLUMN_ADDRESS + " TEXT," + TableInfo.COLUMN_CITY + "TEXT);";
 
 }
