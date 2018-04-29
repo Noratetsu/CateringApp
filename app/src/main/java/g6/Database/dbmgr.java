@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import group6.cateringapp.SignUpDetails;
-
 /**
  * Created by ssaze on 4/27/2018.
  */
@@ -45,6 +44,8 @@ public class dbmgr extends SQLiteOpenHelper{
             "status int," +
             "occasion TEXT);";
 
+
+
     // SQLiteDatabase db;
    //String table_create = "CREATE TABLE registration (ID integer primary key not null, FirstName text, LastName text, UserName text, Password text, UserType text, Email text, phone text, Address text, City text);";
 
@@ -70,7 +71,7 @@ public class dbmgr extends SQLiteOpenHelper{
 
         String Event_Table = " Create TABLE Event (" + EVENTINFO;
 
-        sqLiteDatabase.execSQL(user_table);
+        sqLiteDatabase.execSQL(UserTable.CreateSQLTable);
         sqLiteDatabase.execSQL(Caterer_Table);
         sqLiteDatabase.execSQL(Staff_Table);
         sqLiteDatabase.execSQL(Event_Table);
