@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -14,7 +15,19 @@ public class registration_form extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_form);
+        Button b_cancel = (Button)findViewById(R.id.b_cancel);
+        b_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            openLoginPage();
+            };
+        });
     }
+    private void openLoginPage(){
+        Intent intent = new Intent(this,login_screen.class);
+        startActivity(intent);
+
+    };
 
     public void onRegisterClick(View v){
 

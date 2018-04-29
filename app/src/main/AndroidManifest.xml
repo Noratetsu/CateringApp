@@ -33,7 +33,8 @@
                 android:value="group6.cateringapp.selected_event_screen" />
         </activity>
         <activity android:name=".add_resources" />
-        <activity android:name=".request_event_1"></activity>
+        <activity android:name=".request_event_1" />
+        <activity android:name=".event_summary_screen"></activity>
     </application>
 
 </manifest>

@@ -12,7 +12,7 @@
         android:layout_height="31dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="First name"
         app:layout_constraintEnd_toStartOf="@+id/f_name"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +27,7 @@
         android:layout_marginTop="16dp"
         android:text="Last name"
         app:layout_constraintEnd_toStartOf="@+id/l_name"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -46,8 +47,8 @@
         android:id="@+id/textView6"
         android:layout_width="93dp"
         android:layout_height="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
         android:text="Password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -105,56 +106,64 @@
         android:id="@+id/textView11"
         android:layout_width="67dp"
         android:layout_height="33dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="City"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/city"
+        app:layout_constraintHorizontal_bias="0.66"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.23000002" />
 
     <EditText
         android:id="@+id/f_name"
         android:layout_width="210dp"
-        android:layout_height="30dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/l_name"
         android:layout_width="213dp"
-        android:layout_height="32dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/f_name" />
 
     <EditText
         android:id="@+id/u_name"
         android:layout_width="215dp"
-        android:layout_height="30dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/l_name" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="214dp"
-        android:layout_height="34dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.968"
         app:layout_constraintStart_toEndOf="@+id/textView6"
@@ -162,45 +171,49 @@
 
     <EditText
         android:id="@+id/user_type"
-        android:layout_width="wrap_content"
-        android:layout_height="31dp"
+        android:layout_width="211dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="37dp"
+        android:layout_width="211dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user_type" />
 
     <EditText
         android:id="@+id/phone_num"
-        android:layout_width="wrap_content"
-        android:layout_height="33dp"
+        android:layout_width="209dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <EditText
         android:id="@+id/st_address"
-        android:layout_width="wrap_content"
-        android:layout_height="34dp"
+        android:layout_width="207dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone_num" />
 
@@ -209,9 +222,10 @@
         android:layout_width="78dp"
         android:layout_height="38dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintEnd_toStartOf="@+id/textView13"
         app:layout_constraintTop_toBottomOf="@+id/st_address" />
 
@@ -219,7 +233,7 @@
         android:id="@+id/b_register"
         android:layout_width="121dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
         android:onClick="onRegisterClick"
@@ -233,7 +247,7 @@
         android:id="@+id/b_cancel"
         android:layout_width="128dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="44dp"
         android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -244,7 +258,7 @@
         android:layout_width="63dp"
         android:layout_height="36dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="State"
         app:layout_constraintEnd_toStartOf="@+id/state"
         app:layout_constraintTop_toBottomOf="@+id/st_address" />
@@ -254,9 +268,10 @@
         android:layout_width="62dp"
         android:layout_height="33dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/st_address" />
 

@@ -20,7 +20,7 @@ public class caterer_home extends AppCompatActivity {
         b_view_cat_event_request.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openSelectedEventScreen();
+                openSelectEventScreen();
 
             };
         });
@@ -40,8 +40,8 @@ public class caterer_home extends AppCompatActivity {
         });
     }
 
-    private void openSelectedEventScreen(){
-            Intent intent = new Intent(this,selected_event_screen.class);
+    private void openSelectEventScreen(){
+            Intent intent = new Intent(this,event_summary_screen.class);
             startActivity(intent);
 
 
