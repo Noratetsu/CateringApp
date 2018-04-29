@@ -19,7 +19,7 @@
         android:layout_height="444dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="59dp">
+        tools:layout_editor_absoluteY="69dp">
 
         <Button
             android:id="@+id/b_uevent_sum"
