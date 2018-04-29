@@ -33,7 +33,7 @@ public class dbmgr extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
         sqLiteDatabase.execSQL(UserTable.CreateSQLTable);
-        sqLiteDatabase.execSQL(EventTable.CreateSQLTable);
+       // sqLiteDatabase.execSQL(EventTable.CreateSQLTable);
 
         /*db.execSQL(table_create);
         this.db = db;*/
@@ -42,7 +42,6 @@ public class dbmgr extends SQLiteOpenHelper{
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        String query = "SELECT * FROM User;";
         //Cursor cursor = db.rawQuery(query,null);
       //  int count = cursor.getCount();
       //  values.put(column_id, count);
@@ -68,9 +67,10 @@ public class dbmgr extends SQLiteOpenHelper{
         String password_on_record = "not found";
         if(cursor.moveToFirst()){
             do{
-                uname_on_record = cursor.getString(0);
+                uname_on_record = cursor.getString(0).trim();
                 if (uname_on_record.equals(uname)){
-                    password_on_record = cursor.getString(1);
+                    password_on_record = cursor.getString(1).trim();
+                    System.out.println(cursor.getString(1));
                     break;
                 }
             }
