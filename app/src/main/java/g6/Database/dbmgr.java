@@ -42,7 +42,6 @@ public class dbmgr extends SQLiteOpenHelper{
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        String query = "SELECT * FROM User;";
         //Cursor cursor = db.rawQuery(query,null);
       //  int count = cursor.getCount();
       //  values.put(column_id, count);
