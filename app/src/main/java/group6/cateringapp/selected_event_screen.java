@@ -91,6 +91,8 @@ public class selected_event_screen extends AppCompatActivity {
                         //event status change in event summary
                         //
                         openEventSummaryScreen();
+                        Toast.makeText(selected_event_screen.this, "Event Cancelled!!",Toast.LENGTH_LONG).show();
+                        openEventSummaryScreen();
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {

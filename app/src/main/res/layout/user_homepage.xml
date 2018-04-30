@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="274dp"
-        android:layout_height="35dp"
+        android:layout_width="225dp"
+        android:layout_height="37dp"
         android:text="USER HOMEPAGE"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         tools:layout_editor_absoluteX="16dp"
@@ -19,7 +20,7 @@
         android:layout_height="444dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="69dp">
+        tools:layout_editor_absoluteY="71dp">
 
         <Button
             android:id="@+id/b_uevent_sum"
@@ -46,6 +47,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log Out"
-        tools:layout_editor_absoluteX="290dp"
-        tools:layout_editor_absoluteY="3dp" />
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="16dp" />
 </android.support.constraint.ConstraintLayout>
