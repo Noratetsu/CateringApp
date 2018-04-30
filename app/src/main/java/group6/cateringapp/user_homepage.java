@@ -34,9 +34,7 @@ public class user_homepage extends AppCompatActivity {
         b_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 openLoginScreen();
-
             }
         });
     }

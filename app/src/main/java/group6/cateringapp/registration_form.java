@@ -10,25 +10,26 @@ import android.widget.Toast;
 import g6.Database.dbmgr;
 
 public class registration_form extends AppCompatActivity {
+
+
     dbmgr helper = dbmgr.getInstance(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_form);
-        Button b_cancel = (Button)findViewById(R.id.b_cancel);
-        b_cancel.setOnClickListener(new View.OnClickListener() {
+        Button b_login = (Button)findViewById(R.id.b_login);
+        b_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            openLoginPage();
-            };
+                openLoginScreen();
+            }
         });
     }
-    private void openLoginPage(){
+    private void openLoginScreen(){
         Intent intent = new Intent(this,login_screen.class);
         startActivity(intent);
 
     };
-
     public void onRegisterClick(View v){
 
         if(v.getId()==R.id.b_register)
