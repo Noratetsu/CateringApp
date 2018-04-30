@@ -33,7 +33,7 @@ public class dbmgr extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
         sqLiteDatabase.execSQL(UserTable.CreateSQLTable);
-        sqLiteDatabase.execSQL(EventTable.CreateSQLTable);
+      //  sqLiteDatabase.execSQL(EventTable.CreateSQLTable);
 
         /*db.execSQL(table_create);
         this.db = db;*/

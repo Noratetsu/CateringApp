@@ -29,9 +29,9 @@ public final class UserTable {
     }
 
     public static final String CreateSQLTable = "CREATE TABLE " + TableInfo.TABLE_NAME + "("+
-            TableInfo.COLUMN_ID + " INTEGER PRIMARY KEY," + TableInfo.COLUMN_FIRST_NAME + " TEXT," +
+            TableInfo.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + TableInfo.COLUMN_FIRST_NAME + " TEXT," +
             TableInfo.COLUMN_LAST_NAME + " TEXT," + TableInfo.COLUMN_USERNAME + " TEXT," + TableInfo.COLUMN_PASSWORD + " TEXT," +
-            TableInfo.COLUMN_USER_TYPE + " TEXT," + TableInfo.COLUMN_EMAIL + " Text," + TableInfo.COLUMN_PHONE + " TEXT," +
-            TableInfo.COLUMN_ADDRESS + " TEXT," + TableInfo.COLUMN_CITY + "TEXT);";
+            TableInfo.COLUMN_USER_TYPE + " TEXT," + TableInfo.COLUMN_EMAIL + " TEXT," + TableInfo.COLUMN_PHONE + " TEXT," +
+            TableInfo.COLUMN_ADDRESS + " TEXT," + TableInfo.COLUMN_CITY + " TEXT);";
 
 }

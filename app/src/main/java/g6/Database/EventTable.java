@@ -18,13 +18,11 @@ public final class EventTable {
         public static final String COLUMN_EVENT_NAME = "EventName";
         public static final String COLUMN_STATUS = "Status";
         public static final String COLUMN_OCCASION = "Occasion";
-        public static final String COLUMN_RLID = "RLID";
 
     }
 
     public static final String CreateSQLTable = "CREATE TABLE " + TableInfo.TABLE_NAME + "("+
-            TableInfo.COLUMN_ID + " INTEGER PRIMARY KEY," + TableInfo.COLUMN_RLID + " INTEGER FOREIGN KEY," +
-            TableInfo.COLUMN_DATE + " DATE," + TableInfo.COLUMN_DURATION + " INTEGER," +
+            TableInfo.COLUMN_ID + " INTEGER PRIMARY KEY,"+ TableInfo.COLUMN_DATE + " DATE," + TableInfo.COLUMN_DURATION + " INTEGER," +
             TableInfo.COLUMN_TIME + " DATETIME," + TableInfo.COLUMN_ATTENDANCE + " INTEGER," +
             TableInfo.COLUMN_EVENT_NAME + " TEXT," + TableInfo.COLUMN_STATUS + " INTEGER," +
             TableInfo.COLUMN_OCCASION + "TEXT);";
