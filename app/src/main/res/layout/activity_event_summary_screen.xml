@@ -7,7 +7,7 @@
     tools:context="group6.cateringapp.event_summary_screen">
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/e_eid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"

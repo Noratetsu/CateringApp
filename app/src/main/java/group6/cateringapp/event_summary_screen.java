@@ -21,10 +21,17 @@ public class event_summary_screen extends AppCompatActivity {
         setContentView(R.layout.activity_event_summary_screen);
         getSupportActionBar().setTitle("Event Summary");
         TextView t_event_summary;
+        EditText e_eid = (EditText)findViewById(R.id.e_eid);
+        String eid = "";
+        e_eid.setText(eid);
+        System.out.print(eid);
         t_event_summary = (TextView)findViewById(R.id.t_event_summary);
         Event event = new Event();
-        event.getCatererEventSummary();
-
+        String eventSummary = "Event id 1\n Event name"+event.getEventName()+"\nDate"+event.getDate()+"\n Duration"+event.getDuration()+"HRS\n";
+        //Functionality to pull Event status
+        //
+        //
+        t_event_summary.setText(eventSummary);
         Button b_eid_send;
         b_eid_send = (Button)findViewById(R.id.b_eid_send);
         b_eid_send.setOnClickListener(new View.OnClickListener() {
