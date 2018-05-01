@@ -17,6 +17,7 @@ public class registration_form extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_form);
+        getSupportActionBar().setTitle("Registration");
         Button b_login = (Button)findViewById(R.id.b_login);
         b_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +37,7 @@ public class registration_form extends AppCompatActivity {
         {
             EditText first_name = (EditText)findViewById(R.id.f_name);
             EditText last_name = (EditText)findViewById(R.id.l_name);
+            EditText ID = (EditText)findViewById(R.id.uta_id);
             EditText user_name = (EditText)findViewById(R.id.u_name);
             EditText password = (EditText)findViewById(R.id.password);
             EditText user_type = (EditText)findViewById(R.id.user_type);
@@ -46,6 +48,7 @@ public class registration_form extends AppCompatActivity {
 
             String first_name_str = first_name.getText().toString();
             String last_name_str = last_name.getText().toString();
+            String ID_str = ID.getText().toString();
             String user_name_str = user_name.getText().toString();
             String password_str = password.getText().toString();
             String user_type_str = user_type.getText().toString();
@@ -59,6 +62,7 @@ public class registration_form extends AppCompatActivity {
             SignUpDetails c = new SignUpDetails();
             c.setFirst_name(first_name_str);
             c.setLast_name(last_name_str);
+            c.setId(ID_str);
             c.setUser_name(user_name_str);
             c.setPassword(password_str);
             c.setUser_type(user_type_str);

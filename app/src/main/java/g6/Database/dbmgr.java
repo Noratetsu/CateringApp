@@ -85,6 +85,7 @@ public class dbmgr extends SQLiteOpenHelper{
       //  values.put(column_id, count);
         values.put(UserTable.TableInfo.COLUMN_FIRST_NAME,c.getFirst_name());
         values.put(UserTable.TableInfo.COLUMN_LAST_NAME,c.getLast_name());
+        values.put(UserTable.TableInfo.COLUMN_ID,c.getId());
         values.put(UserTable.TableInfo.COLUMN_USERNAME,c.getUser_name());
         values.put(UserTable.TableInfo.COLUMN_USER_TYPE,c.getUser_type());
         values.put(UserTable.TableInfo.COLUMN_EMAIL,c.getEmail());
@@ -135,6 +136,8 @@ public class dbmgr extends SQLiteOpenHelper{
         return password_on_record;
     }
 
+
+
     public String searchUserType(String uname){
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT " + UserTable.TableInfo.COLUMN_USERNAME + " , " + UserTable.TableInfo.COLUMN_USER_TYPE+ " FROM " + UserTable.TableInfo.TABLE_NAME + ";";
@@ -154,6 +157,25 @@ public class dbmgr extends SQLiteOpenHelper{
         return usertype_on_record;
 
     }
+    /*public int updateInfo(String ID, String fname, String lname, String uname, String pass, String utype, String email,
+                           String phone, String add, String city, SQLiteDatabase db){
+
+        ContentValues cv = new ContentValues();
+        cv.put(UserTable.TableInfo.COLUMN_FIRST_NAME, fname);
+        cv.put(UserTable.TableInfo.COLUMN_LAST_NAME, lname);
+        cv.put(UserTable.TableInfo.COLUMN_USERNAME, uname);
+        cv.put(UserTable.TableInfo.COLUMN_PASSWORD, pass);
+        cv.put(UserTable.TableInfo.COLUMN_USER_TYPE, utype);
+        cv.put(UserTable.TableInfo.COLUMN_EMAIL, email);
+        cv.put(UserTable.TableInfo.COLUMN_PHONE, phone);
+        cv.put(UserTable.TableInfo.COLUMN_ADDRESS, add);
+        cv.put(UserTable.TableInfo.COLUMN_CITY, city);
+        String selection = UserTable.TableInfo.COLUMN_ID + "LIKE ?";
+        String[] selection_args = {ID};
+        int count = db.update(UserTable.TableInfo.TABLE_NAME, cv, selection, selection_args);
+
+        return count;
+    }*/
 
     /*public SignUpDetails retrieveUser(String username, String password) {
         SQLiteDatabase db = this.getWritableDatabase();

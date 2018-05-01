@@ -11,7 +11,7 @@ import android.widget.Button;
  */
 
 public class user_homepage extends AppCompatActivity {
-    Button b_viewSummary, b_request, b_logout, b_request_summary;
+    Button b_viewSummary, b_request, b_logout, b_request_summary, b_update;
 
 
 
@@ -21,6 +21,7 @@ public class user_homepage extends AppCompatActivity {
         b_logout = (Button) findViewById(R.id.b_logout);
         b_request = (Button) findViewById(R.id.b_request_event);
         b_request_summary = (Button) findViewById(R.id.b_uevent_sum);
+        b_update = (Button) findViewById(R.id.b_update);
         b_request.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,6 +40,12 @@ public class user_homepage extends AppCompatActivity {
                 openUserRequestSummaryPage();
             }
         });
+        b_update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openUpdateProfile();
+            }
+        });
     }
 
 
@@ -53,6 +60,10 @@ public class user_homepage extends AppCompatActivity {
     }
     private void openUserRequestSummaryPage(){
         Intent intent = new Intent(this, user_request_summary.class);
+        startActivity(intent);
+    }
+    private void openUpdateProfile(){
+        Intent intent = new Intent(this, update_user_profile.class);
         startActivity(intent);
     }
 }

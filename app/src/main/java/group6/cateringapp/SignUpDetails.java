@@ -5,12 +5,12 @@ package group6.cateringapp;
  */
 
 public class SignUpDetails {
-    String first_name, last_name, user_name, password, user_type, email, phone, address, city;
-    int id;
-    public void setId(int id){
+    String first_name, last_name, user_name, password, user_type, email, phone, address, city, id;
+
+    public void setId(String id){
         this.id = id;
     }
-    public int getId(){
+    public String getId(){
         return this.id;
     }
     public void setFirst_name(String first_name){

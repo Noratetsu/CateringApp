@@ -42,7 +42,7 @@ public class System_User {
         return userName;
     }
 
-    public void setUserName(String userName) {
+    public void setUserName(String name) {
         this.userName = userName;
     }
 
