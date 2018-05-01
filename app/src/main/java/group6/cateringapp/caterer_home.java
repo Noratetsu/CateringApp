@@ -35,7 +35,13 @@ public class caterer_home extends AppCompatActivity {
             public void onClick(View view) {
 
                 openLoginScreen();
+            }
+        });
+        b_update_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                openUdatePage();
             }
         });
     }
@@ -55,8 +61,10 @@ public class caterer_home extends AppCompatActivity {
         Intent intent = new Intent(this, login_screen.class);
         startActivity(intent);
     };
-
-
+    private void openUdatePage(){
+        Intent intent = new Intent(this, update_user_profile.class);
+        startActivity(intent);
+    }
 }
 
 
