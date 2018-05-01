@@ -40,7 +40,7 @@ public class caterer_home extends AppCompatActivity {
         });
     }
 
-    private void openSelectEventScreen(){
+    public void openSelectEventScreen(){
             Intent intent = new Intent(this,event_summary_screen.class);
             startActivity(intent);
 

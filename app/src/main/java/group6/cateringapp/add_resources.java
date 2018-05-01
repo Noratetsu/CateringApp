@@ -60,7 +60,7 @@ public class add_resources extends AppCompatActivity {
         });
 
     }
-    private void openSelectedEventScreen(){
+    public void openSelectedEventScreen(){
         Intent intent = new Intent(this, selected_event_screen.class);
         startActivity(intent);
 

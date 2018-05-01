@@ -1,6 +1,5 @@
 package group6.cateringapp;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,9 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import g6.Core.CatererEventSummary;
 import g6.Core.Event;
-import g6.Core.EventSummary;
 
 public class event_summary_screen extends AppCompatActivity {
 
@@ -33,7 +30,7 @@ public class event_summary_screen extends AppCompatActivity {
         //
         t_event_summary.setText(eventSummary);
         Button b_eid_send;
-        b_eid_send = (Button)findViewById(R.id.b_eid_send);
+        b_eid_send = (Button)findViewById(R.id.b_approve);
         b_eid_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

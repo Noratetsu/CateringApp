@@ -16,13 +16,13 @@
         android:ems="10"
         android:hint="Event ID"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/b_eid_send"
+        app:layout_constraintEnd_toStartOf="@+id/b_approve"
         app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/t_event_summary" />
 
     <Button
-        android:id="@+id/b_eid_send"
+        android:id="@+id/b_approve"
         android:layout_width="104dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
@@ -30,7 +30,7 @@
         android:layout_marginTop="8dp"
         android:text="Approve"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/b_decline"
         app:layout_constraintTop_toBottomOf="@+id/t_event_summary" />
 
     <EditText
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/b_decline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

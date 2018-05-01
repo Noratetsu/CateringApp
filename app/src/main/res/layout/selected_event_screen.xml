@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/b_logout" />
 
     <Button
-        android:id="@+id/b_view_avail_halls"
+        android:id="@+id/b_view_available_halls"
         android:layout_width="289dp"
         android:layout_height="62dp"
         android:layout_marginEnd="24dp"
@@ -50,7 +50,7 @@
         android:text="Add Resources"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b_view_avail_halls" />
+        app:layout_constraintTop_toBottomOf="@+id/b_view_available_halls" />
 
     <Button
         android:id="@+id/b_cancel_event"

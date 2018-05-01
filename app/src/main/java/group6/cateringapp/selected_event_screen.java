@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class selected_event_screen extends AppCompatActivity {
 
-    Button b_view_available_staff, b_logout, b_add_resources, b_cancel_event;
+    Button b_view_available_staff, b_logout, b_add_resources, b_cancel_event, b_view_available_halls;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class selected_event_screen extends AppCompatActivity {
         b_view_available_staff = (Button) findViewById(R.id.b_view_available_staff);
         b_logout = (Button) findViewById(R.id.b_logout);
         b_add_resources = (Button) findViewById(R.id.b_add_resources);
+        b_view_available_halls = (Button)findViewById(R.id.b_view_available_halls);
         b_cancel_event = (Button) findViewById(R.id.b_cancel_event);
         b_view_available_staff.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +55,12 @@ public class selected_event_screen extends AppCompatActivity {
             };
 
 
+        });
+        b_view_available_halls.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openViewAvailableHalls();
+            }
         });
 
     }
@@ -108,6 +115,10 @@ public class selected_event_screen extends AppCompatActivity {
     }
     private void openEventSummaryScreen(){
         Intent intent = new Intent(this,event_summary_screen.class);
+        startActivity(intent);
+    }
+    private void openViewAvailableHalls(){
+        Intent intent = new Intent(this, ViewAvailableHalls.class);
         startActivity(intent);
     }
 
