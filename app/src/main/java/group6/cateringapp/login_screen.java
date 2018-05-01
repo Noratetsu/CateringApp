@@ -76,7 +76,7 @@ public class login_screen extends AppCompatActivity {
 
     }
     private void openStaffScreen(){
-        Intent intent = new Intent(this,staff_homepage.class);
+        Intent intent = new Intent(this,staff_home.class);
         startActivity(intent);
 
     }

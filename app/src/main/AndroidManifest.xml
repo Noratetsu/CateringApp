@@ -22,7 +22,6 @@
         <activity android:name=".user_homepage" />
         <activity android:name=".login_screen" />
         <activity android:name=".registration_form" />
-        <activity android:name=".staff_homepage" />
         <activity
             android:name=".ViewAvailableStaff"
             android:label="@string/title_activity_view_available_staff"
@@ -35,7 +34,8 @@
         <activity android:name=".add_resources" />
         <activity android:name=".request_event_1" />
         <activity android:name=".event_summary_screen" />
-        <activity android:name=".update_user_profile"></activity>
+        <activity android:name=".update_user_profile" />
+        <activity android:name=".staff_home"></activity>
     </application>
 
 </manifest>
